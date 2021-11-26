@@ -3,6 +3,7 @@ Anomaly detection system using ML algorithms for clustering unlabeled traffic da
 
 ![Anomaly-Detection-System](figures/completeSystem.png)
 
+## Description
 The proposed system aims to provide a real-time data stream operation and big data processing framework to achieve immediate and resilient network anomaly detection. By also providing mitigation actions from high level entities like the **IBN tool** which is able to manage the underlying network by means of API flow insertion rules. The status of the system can be observed thanks to a **real-time monitoring** implementation that collects information from hosts and switches.
 
 The overall system is composed of the use of s**Flow configuration** on data plane switches that periodically send traffic data to a data streams pipeline connected to and **sFlow Collector** and **Apache Kafka**. This high volume of data is provisioned to **Apache Spark** for real-time big data processing and anomaly detection. Also, the RAW, processed and Anomalous data are sent to an ELK (Elasticsearch, Logstash, Kibana) stack for historical records. 
@@ -42,7 +43,7 @@ Also **apache kafka** is deployed in this system
 
 Once kafka is running in the system it is necessary to create a topic for keeping the sflow traffic send by the collector.
 
-code(pene)
+`code(pene)`
 
 ### SmartStack
 
