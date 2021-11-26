@@ -19,6 +19,6 @@ Python code that runs in Apache Spark using the pyspark libraries. The functiona
 This code is used once we have trained models of ML algorithms. Replaces the functionality of  **dataProcessing.py** (No need to use that anymore)
 
 ### Folders
-**TrainML
+**TrainML**
 
 * Contains the Jupyter Notebooks used for training the ML models, and also performance comparisson and tuning.
