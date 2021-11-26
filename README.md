@@ -23,7 +23,7 @@ Hardware                                                                        
 **Server 3 - Monitoring System** <br> Ubuntu 18.04.5 with 16 GB of RAM and <br>16 logical CPU cores, 2 Tera drive         | Grafana 8.2 <br> Prometheus 3.2 <br> Prometheus Gateway | python 3.0 <br> pandas 1.3.0 <br> numpy 1.20.3 <br> request 2.26.0
 **Server 4 - IBN Tool** <br> Ubuntu 18.04.5 with 32 GB of RAM and <br>16 logical CPU cores, 1 Tera drive                  | Mariadb 10.3 <br> Apache2 2.2.41 <br> phpmyadmin 5.0.0-1    | Python 3.8.5 <br> flask 1.1.2
 
-# Network Infrastructure
+### Network Infrastructure
 This particular implementation uses the KOREN infrastructure -> "KOREN (Korea Advanced Research Network) is a non-profit testbed network infrastructure established for facilitating research and development and international joint research cooperation. It provides quality broadband network testbed for domestic and international research activities to the industry, academia, and research institutions, enabling testing of future network technologies and supporting R&D on advanced applications"
 
 <https://www.koren.kr/eng/Intro/intro01.asp>
@@ -34,7 +34,7 @@ Any other network capable of sending sFlow data can be used with our project. Ev
 
 If collecting your own data, this setting can be configured as pleased. Just be mindful to not modify it at later steps as it may cause issues with the behaviour of the system (Do not change the value once you have collected processed data)
 
-# Flow Stream Collector
+### Flow Stream Collector
 Contains the implementation of the opensource sFlow collector **goflow2**  <https://github.com/netsampler/goflow2>
 this collector is used to get sFlow packets from the configured switches.
 
@@ -44,10 +44,10 @@ Once kafka is running in the system it is necessary to create a topic for keepin
 
 code(pene)
 
-# SmartStack
+### SmartStack
 
 
-# Flow Stream Collector
+### Flow Stream Collector
 
 
-# Flow Stream Collector
+### Flow Stream Collector
