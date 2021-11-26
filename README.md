@@ -16,9 +16,9 @@ The whole system aims to guarantee the operation of the anomaly detection mechan
 
 The system has been deployed in 4 server machines, but it can be deployed in a single machine if the computing resources are sufficient. Be mindful that if deploying in a single machine the use of deployment environments (such as anaconda) are adviced as there are specific version requirements dependent on the version of python that is used.
 
-Hardware                                                                 | Software       | Libraries
--------------------------------------------------------------------------| -------------  | -------------
-**Server 1** <br> Ubuntu 18.04.5 with 250 GB of RAM and 64 logical CPU cores      |                |
-**Server 1** <br> Ubuntu 18.04.5 with 250 GB of RAM and 64 logical CPU cores      |
-**Server 1** <br> Ubuntu 18.04.5 with 250 GB of RAM and 64 logical CPU cores      |
-**Server 1** <br> Ubuntu 18.04.5 with 250 GB of RAM and 64 logical CPU cores      | Content Cell   | Content Cell
+Hardware                                                                                                              | Software       | Libraries
+----------------------------------------------------------------------------------------------------------------------| -------------  | -------------
+**Server 1 - SmartStack** <br> Ubuntu 18.04.5 with 250 GB of RAM and 64 logical CPU cores, 4 Tera drive               | elasticsearch-7.15.0 <br> elasticsearch-7.15.0 <br> elasticsearch-7.15.0 <br> elasticsearch-7.15.0 <br>                |
+**Server 2 - Flow Stream Collector** <br> Ubuntu 18.04.5 with 64 GB of RAM and 40 logical CPU cores, 2 Tera drive     |
+**Server 3 - Monitoring System** <br> Ubuntu 18.04.5 with 64 GB of RAM and 40 logical CPU cores, 1 Tera drive         |
+**Server 4 - IBN Tool** <br> Ubuntu 18.04.5 with 32 GB of RAM and 16 logical CPU cores, 1 Tera drive                  | Content Cell   | Content Cell
