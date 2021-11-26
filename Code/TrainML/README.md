@@ -14,7 +14,7 @@ The algorithms compared are as follows:
 The Dataset used for this code can be found as **LabeledDATANEW.csv** 
 The output for the mean accuracy and std-deviation of the accuracy for the K-Fold cross-validation is as follows.
 
-![K-fold results](figures/kfold.png)
+![K-fold results](figures/k-fold.png)
 
 
 **Training.ipynb**
