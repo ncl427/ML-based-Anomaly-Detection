@@ -37,13 +37,19 @@ If collecting your own data, this setting can be configured as pleased. Just be 
 
 ### Flow Stream Collector
 Contains the implementation of the opensource sFlow collector **goflow2**  <https://github.com/netsampler/goflow2>
-this collector is used to get sFlow packets from the configured switches.
+this collector is used to get sFlow packets from the configured switches. There are binary files available for download.
 
 Also **apache kafka** is deployed in this system
 
 Once kafka is running in the system it is necessary to create a topic for keeping the sflow traffic send by the collector.
 
-`code(pene)`
+`bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic flows`
+You can replace localhost with an specific ip of your server IF needed. Do not change the port.
+
+Then, we start the sflow collector with this command
+`goflow2 -transport=kafka -transport.kafka.brokers=localhost:9092 -transport.kafka.topic=flows`
+
+We use JSON formating in our Spark application so, DO NOT activate the option of using protobuf. Allso, You can replace localhost with an specific ip of your server IF needed.
 
 ### SmartStack
 
