@@ -44,6 +44,7 @@ Also **apache kafka** is deployed in this system
 Once kafka is running in the system it is necessary to create a topic for keeping the sflow traffic send by the collector.
 
 `bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic flows`
+
 You can replace localhost with an specific ip of your server IF needed. Do not change the port.
 
 Then, we start the sflow collector with this command
@@ -53,6 +54,21 @@ Then, we start the sflow collector with this command
 We use JSON formating in our Spark application so, DO NOT activate the option of using protobuf. Allso, You can replace localhost with an specific ip of your server IF needed.
 
 ### SmartStack
+Be sure to download and deploy elasticsearch, logstash, kibana and spark as per the system requirements in the table. Please be mindful of the versions. Specially pyarrow and pandas. It is recommended to create a CONDA environment with python version 3.6 and use it for running the Spark commands and the Jupyter notebooks from this project.
+
+Confgiruation files have been provided in the **Config/** folder, the **kafka.conf** file should be placed inside the logstash config folder, and the IP needs to be changed to reflect the IP of the Kafka server and elasticsearch (Bi mindful of the user name and password.)
+
+If you enable security for ELK (which you should) try to use the same user name and password as provided in this project to avoid issues, as this is used in multiple parts of the code. (USER: elastic, PASSWORD: elastic)
+
+Place the **spark-env.sh** and **spark-defaults.conf** inside the **conf/** folder of your Spark deployment. 
+
+After this you can launch your deployment as this:
+
+**for Spark, execute this commands inside the spark folder**
+
+`sbin/start-master.sh`
+`sbin/start-slave.sh spark://YOURIPADDRESS:7077`
+
 
 
 ### Flow Stream Collector
