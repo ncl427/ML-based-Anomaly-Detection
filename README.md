@@ -11,3 +11,13 @@ Unsupervised learning techniques (**K-Means**) and supervised learning classifie
 **Prometheus** and **Grafana** are used for the real time monitoring system that receives the data from the hosts and switches inside the network.
 The **I**BN tool** receives the mitigation actions from the Anomaly Detection system and applies the flow rules for deletion of anomalous traffic on the basis of vlanIDs
 The whole system aims to guarantee the operation of the anomaly detection mechanism when the volume of data exponentially increases due to flood network attacks.
+
+## Deployment of the system
+
+The system has been deployed in 4 server machines, but it can be deployed in a single machine if the computing resources are sufficient. Be mindful that if deploying in a single machine the use of deployment environments (such as anaconda) are adviced as there are specific version requirements dependent on the version of python that is used.
+
+Hardware                      | Software       | Libraries
+------------------------------| -------------  | -------------
+Ubuntu 18.04.5 with 250 GB of |                |
+RAM and 64 logical CPU cores   
+Content Cell                  | Content Cell   | Content Cell
