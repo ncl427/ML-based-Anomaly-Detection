@@ -47,6 +47,7 @@ Once kafka is running in the system it is necessary to create a topic for keepin
 You can replace localhost with an specific ip of your server IF needed. Do not change the port.
 
 Then, we start the sflow collector with this command
+
 `goflow2 -transport=kafka -transport.kafka.brokers=localhost:9092 -transport.kafka.topic=flows`
 
 We use JSON formating in our Spark application so, DO NOT activate the option of using protobuf. Allso, You can replace localhost with an specific ip of your server IF needed.
