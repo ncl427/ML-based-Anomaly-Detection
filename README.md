@@ -40,6 +40,10 @@ this collector is used to get sFlow packets from the configured switches.
 
 Also **apache kafka** is deployed in this system
 
+Once kafka is running in the system it is necessary to create a topic for keeping the sflow traffic send by the collector.
+
+code(pene)
+
 # SmartStack
 
 
