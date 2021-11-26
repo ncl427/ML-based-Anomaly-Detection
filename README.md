@@ -20,5 +20,5 @@ Hardware                                                                        
 ----------------------------------------------------------------------------------------------------------------------| -------------  | -------------
 **Server 1 - SmartStack** <br> Ubuntu 18.04.5 with 250 GB of RAM and <br>64 logical CPU cores, 4 Tera drive               | elasticsearch-7.15.0 <br> logstash-7.15.0 <br> kibana-7.15.0 <br> spark-2.3.0-hadoop2.7 <br> Java 8   | python 3.6<br>pyarrow 0.15 <br> scikit-learn 0.23.0 <br> joblib 1.1.0 <br> pandas 1.1.5 <br> pyspark 3.2.0
 **Server 2 - Flow Stream Collector** <br> Ubuntu 18.04.5 with 64 GB of RAM and <br>40 logical CPU cores, 2 Tera drive     | goflow2 v1.0.4<br>kafka_2.12-2.8.1 | python 3.8.8
-**Server 3 - Monitoring System** <br> Ubuntu 18.04.5 with 64 GB of RAM and <br>40 logical CPU cores, 1 Tera drive         | 
+**Server 3 - Monitoring System** <br> Ubuntu 18.04.5 with 16 GB of RAM and <br>16 logical CPU cores, 2 Tera drive         | Grafana 8.2 <br> Prometheus 3.2 <br> Prometheus Gateway | python 3.0 <br> pandas 1.3.0 <br> numpy 1.20.3 <br> request 2.26.0
 **Server 4 - IBN Tool** <br> Ubuntu 18.04.5 with 32 GB of RAM and <br>16 logical CPU cores, 1 Tera drive                  | Mariadb 10.3 <br> Apache2 2.2.41 <br> phpmyadmin 5.0.0-1    | Python 3.8.5 <br> flask 1.1.2
