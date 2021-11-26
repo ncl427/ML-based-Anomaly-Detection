@@ -99,11 +99,18 @@ The spark application will collect data (If you already have traffic from your n
 
 Anomaly detection will start alongside data processing.
 
-**IMPORTANT** Just run one of this at a time, the anomalyDetection.py implementation already has the processing capabilitites, so you do not need to run the other python code when your models are already trained.
+**IMPORTANT** Just run one of this at a time, the **anomalyDetection.py** implementation already has the processing capabilitites, so you do not need to run the other python code when your models are already trained.
+
+**IMPORTANT** Do not forget to modify the code provided with the IP information of your servers- KAFKA and Elasticsearch. 
 
 
+### IBN Tool
 
-### Flow Stream Collector
+Details of implementation can be seen in this repo
+
+<https://github.com/TalhaJadoon/KOREN-Project>
 
 
-### Flow Stream Collector
+### Real-time monitoring
+
+Details of implementation can be seen in this repo
