@@ -1,7 +1,7 @@
 # Code related to training the ML algorithms used for the Anomaly Detection System
 ## Contents
 ### Files
-**AlgorithComparisson.ipynb**
+#### **AlgorithComparisson.ipynb**
 Jupyter Notebook used for comparing the perfomrance of different classifiers by applying K-Fold crossvalidation.
 The algorithms compared are as follows:
 * Logistic Regression (LR)
@@ -17,7 +17,7 @@ The output for the mean accuracy and std-deviation of the accuracy for the K-Fol
 ![K-fold results](figures/k-fold.png)
 
 
-**Training.ipynb**
+#### **Training.ipynb**
 Jupyter Notebook used for training the ML algorithms and finding the normal traffic labels:
 * Obtains data from elasticsearch (Needs to be previously configured and data needs to exist inside an index)
 * Saves data as CSV
@@ -32,13 +32,13 @@ Jupyter Notebook used for training the ML algorithms and finding the normal traf
 
 This Notebook is a requisite for the Anomaly Detection as it outputs the required models used by the system.
 
-**TrainingCSV.ipynb**
+#### **TrainingCSV.ipynb**
 Same as above, but this notebook does not connect to elasticsearch (useful for quick training the models when there is original data in CSV)
 
-**sFLOW-Feat.csv**
+#### **sFLOW-Feat.csv**
 30+ days of collected and processed unlabeled dataset with 5 features -> **SumOfFLows, SumOfBytes, SumOfPackets, UniqDstPorts, UniqDstIps**. Used for training the models in **TrainingCSV.ipynb**
 
-**LabeledDATANEW.csv**
+#### **LabeledDATANEW.csv**
 Dataset used for comparing the different classifiers in **AlgorithComparisson.ipynb**
 
 ### Folders
