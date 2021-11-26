@@ -67,7 +67,22 @@ After this you can launch your deployment as this:
 **for Spark, execute this commands inside the spark folder**
 
 `sbin/start-master.sh`
+
 `sbin/start-slave.sh spark://YOURIPADDRESS:7077`
+
+Change to your ip or hostname.
+
+**Then you can launch elasticsearch and kibana**.
+
+Inside the elasticsearch folder
+`bin/elasticsearch`
+
+Inside the kibana folder
+`bin/kibana`
+
+Inside logstash folder
+`bin/logstash -f config/kafka.conf`
+
 
 
 
