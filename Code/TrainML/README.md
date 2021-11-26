@@ -1,4 +1,4 @@
-# Code related to training the ML algorithms used for Anomaly Detection System
+# Code related to training the ML algorithms used for the Anomaly Detection System
 ## Contents
 ### Files
 **AlgorithComparisson.ipynb**
