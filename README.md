@@ -14,7 +14,7 @@ The whole system aims to guarantee the operation of the anomaly detection mechan
 
 ## Deployment of the system
 
-The system has been deployed in 4 server machines, but it can be deployed in a single machine if the computing resources are sufficient. Be mindful that if deploying in a single machine the use of deployment environments (such as anaconda) are adviced as there are specific version requirements dependent on the version of python that is used.
+The system has been deployed in 4 server machines (Make sure they can communicate with each other), but it can be deployed in a single machine if the computing resources are sufficient. Be mindful that if deploying in a single machine the use of deployment environments (such as anaconda) are adviced as there are specific version requirements dependent on the version of python that is used. 
 
 Hardware                                                                                                              | Software       | Libraries
 ----------------------------------------------------------------------------------------------------------------------| -------------  | -------------
@@ -22,3 +22,28 @@ Hardware                                                                        
 **Server 2 - Flow Stream Collector** <br> Ubuntu 18.04.5 with 64 GB of RAM and <br>40 logical CPU cores, 2 Tera drive     | goflow2 v1.0.4<br>kafka_2.12-2.8.1 | python 3.8.8
 **Server 3 - Monitoring System** <br> Ubuntu 18.04.5 with 16 GB of RAM and <br>16 logical CPU cores, 2 Tera drive         | Grafana 8.2 <br> Prometheus 3.2 <br> Prometheus Gateway | python 3.0 <br> pandas 1.3.0 <br> numpy 1.20.3 <br> request 2.26.0
 **Server 4 - IBN Tool** <br> Ubuntu 18.04.5 with 32 GB of RAM and <br>16 logical CPU cores, 1 Tera drive                  | Mariadb 10.3 <br> Apache2 2.2.41 <br> phpmyadmin 5.0.0-1    | Python 3.8.5 <br> flask 1.1.2
+
+# Network Infrastructure
+This particular implementation uses the KOREN infrastructure -> "KOREN (Korea Advanced Research Network) is a non-profit testbed network infrastructure established for facilitating research and development and international joint research cooperation. It provides quality broadband network testbed for domestic and international research activities to the industry, academia, and research institutions, enabling testing of future network technologies and supporting R&D on advanced applications"
+
+<https://www.koren.kr/eng/Intro/intro01.asp>
+
+The swtiches have been configured with sFlow agents to export flow information.
+
+Any other network capable of sending sFlow data can be used with our project. Even a virtual network made in mininet. The important configuration that needs to be considered is that the Sampling rate for the sflow packets needs to be set at **1024** if the ML are trained with the provided dataset in this repository. As the data was collected with that rate, and to avoid issues with the classification.
+
+If collecting your own data, this setting can be configured as pleased. Just be mindful to not modify it at later steps as it may cause issues with the behaviour of the system (Do not change the value once you have collected processed data)
+
+# Flow Stream Collector
+Contains the implementation of the opensource sFlow collector **goflow2**  <https://github.com/netsampler/goflow2>
+this collector is used to get sFlow packets from the configured switches.
+
+Also **apache kafka** is deployed in this system
+
+# SmartStack
+
+
+# Flow Stream Collector
+
+
+# Flow Stream Collector
