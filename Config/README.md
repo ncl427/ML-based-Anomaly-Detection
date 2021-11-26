@@ -3,9 +3,12 @@
 ### Files
 
 #### **kafka.conf**
-Logstash configuration for Kafka topic conssumption and sending RAW sflow data to elasticsearch
+Logstash configuration for Kafka topic consumption and sending RAW sflow data to elasticsearch
 
-#### **LabeledDATANEW.csv**
-Dataset used for comparing the different classifiers in **AlgorithComparisson.ipynb**
+#### **spark-defaults.conf**
+Configuration file that increases the Memory for handling processing tasks (Related to Java)
 
-These files can be used for quick training the models.
+#### **spark-env.sh**
+Configuration file for fixing env variable issues
+
+Copy-paste these files in the directories specified in <https://github.com/ncl427/ML-based-Anomaly-Detection#smartstack>
