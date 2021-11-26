@@ -103,6 +103,8 @@ Anomaly detection will start alongside data processing.
 
 **IMPORTANT** Do not forget to modify the code provided with the IP information of your servers- KAFKA and Elasticsearch. 
 
+**IMPORTANT** Java 8 is needed, do not install other versions as it may break your whole operation.
+
 
 ### IBN Tool
 
