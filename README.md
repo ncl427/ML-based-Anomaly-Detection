@@ -83,6 +83,23 @@ Inside the kibana folder
 Inside logstash folder
 `bin/logstash -f config/kafka.conf`
 
+Once Spark is running, place the files contained inside the **Code/** folder of this repository (anomalyDetection.py, dataProcessing.py) inside the **python** folder of the spark deployment.
+Also, you need to download the **elasticsearch-spark-20_2.11-7.15.0.jar** from the <https://www.elastic.co/downloads/hadoop> site and place the jar inside the spark folder. 
+
+**If you are collecting data without applying ML run**
+
+`bin/spark-submit --jars elasticsearch-spark-20_2.11-7.15.0.jar --packages org.apache.spark:spark-streaming-kafka-0-8_2.11:2.3.0 python/dataProcessing.py | grep -v INFO | grep -v WARN`
+
+The spark application will collect data (If you already have traffic from your network) process it and send it to elasticsearch. The indexes will be created automatically. 
+
+**If you have trained your models from** <https://github.com/ncl427/ML-based-Anomaly-Detection/tree/main/Code/TrainML>
+--Follow the instructions over there and place the generated models inside the **python** directory of spark. --
+
+`bin/spark-submit --jars elasticsearch-spark-20_2.11-7.15.0.jar --packages org.apache.spark:spark-streaming-kafka-0-8_2.11:2.3.0 python/anomalyDetection.py | grep -v INFO | grep -v WARN`
+
+Anomaly detection will start alongside data processing.
+
+**IMPORTANT** Just run one of this at a time, the anomalyDetection.py implementation already has the processing capabilitites, so you do not need to run the other python code when your models are already trained.
 
 
 
