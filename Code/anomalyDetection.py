@@ -302,8 +302,8 @@ def predict_class_pandas_udf(cols):
 		
 
 def sendToIBN(anoDF):
-	# First get a list of all hosts.
-	# Create dictionary mapping from IP to host switch.
+	# Creates a JSON object.
+	# The json is formatted with the IP address and VLAN ID .
 	
 	print("Send Mitigation Action to IBN tool")
 	# Configure parameters needed for POST request
