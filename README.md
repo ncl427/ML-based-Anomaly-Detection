@@ -108,11 +108,9 @@ Anomaly detection will start alongside data processing.
 
 ### IBN Tool
 
-Details of implementation can be seen in this repo
-
-<https://github.com/TalhaJadoon/KOREN-Project>
+Details and code of the implementation will be added soon.
 
 
 ### Real-time monitoring
 
-Details of implementation can be seen in this repo
+Details and code of implementation will be added soon.
