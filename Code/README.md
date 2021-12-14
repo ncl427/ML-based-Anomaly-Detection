@@ -21,4 +21,4 @@ This code is used once we have trained models of ML algorithms. Replaces the fun
 ### Folders
 **TrainML**
 
-* Contains the Jupyter Notebooks used for training the ML models, and also performance comparisson and tuning.
+* Contains the Jupyter Notebooks used for training the ML models, and also performance comparisson and tuning of the algorithms.

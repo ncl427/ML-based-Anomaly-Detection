@@ -9,6 +9,6 @@ Logstash configuration for Kafka topic consumption and sending RAW sflow data to
 Configuration file that increases the Memory for handling processing tasks (Related to Java)
 
 #### **spark-env.sh**
-Configuration file for fixing env variable issues
+Configuration file for fixing environmental variable issues
 
 Copy-paste these files in the directories specified in <https://github.com/ncl427/ML-based-Anomaly-Detection#smartstack>

@@ -8,4 +8,4 @@
 #### **LabeledDATANEW.csv**
 Dataset used for comparing the different classifiers in **AlgorithComparisson.ipynb**
 
-These files can be used for quick training the models.
+These files can be used for quick training the ML models.
